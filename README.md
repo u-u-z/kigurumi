@@ -2,7 +2,7 @@
 
 > 我觉得应该尝试自己研究一下，尽管这样做成本依旧很大 ··· 
 
-<img src="https://i.loli.net/2020/11/01/obtnA9QREGe265Y.jpg" style="zoom: 25%;" />
+<img src="https://i.loli.net/2020/11/01/x6oUIE4iLSZQWNz.jpg" style="zoom: 25%;" />
 
 快看，我订的 Kigurumi 头壳到手了！
 
