@@ -83,5 +83,5 @@
 [タカkun アーキテクト仕様　①：面本体](https://twitter.com/Taka_kun_0121/status/1342838209609232384)
 
 ## 一些思域流量号
-[想变成可爱娃娃这件事](https://t.me/moekig)
+[✈ 想变成可爱娃娃这件事](https://t.me/moekig)
 
