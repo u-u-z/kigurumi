@@ -1,6 +1,6 @@
-# 穷鬼的 Kigurumi 折腾日常
+# AWESOME KIGURUMI!!
 
-> 我觉得应该尝试自己研究一下，尽管这样做成本依旧很大 ··· 
+> 《穷鬼的 Kigurumi 折腾日常》我觉得应该尝试自己研究一下，尽管这样做成本依旧很大 ··· 
 
 <img src="https://i.loli.net/2020/11/01/x6oUIE4iLSZQWNz.jpg" style="zoom: 25%;" />
 
