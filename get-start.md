@@ -46,7 +46,7 @@ Kigurumi 在一些报道中被称为[“破产第四坑”](https://baike.baidu.
 * 认真的组织语言；
 * **清楚**、**详细**但**不啰嗦**的描述所表达的内容；
 * 尊重每一个人；
-* ****[**学会提问**](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh\_CN.md)，有效的提问（很多店家还是对认真可爱的孩子耐心十足的 ^\_^）；
+* [**学会提问**](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh\_CN.md)，有效的提问（很多店家还是对认真可爱的孩子耐心十足的 ^\_^）；
 * 在需求确定后，任何的修改，请带着“**需要支付额外修改成本**”的准备、觉悟；
 
 > 笔者并非从事 Kigurumi 用品制作，但是从事定制服务行业。这是从买家、卖家立场共同思考的想法。
