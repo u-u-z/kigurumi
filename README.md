@@ -8,8 +8,8 @@
 2. 🏠 [工坊与店家](creator-workshop.md)
 3. 😋 开源模型
 4. 📺 活跃玩家
-5. 🔧 [自制篇](DIY/)
-6. 群组社群
+5. 🔧  [自制篇](DIY/)
+6. 🎈 群组社群
 
 旧版内容: [\<AWESOME KIGURUMI!!>](old\_content/)
 
