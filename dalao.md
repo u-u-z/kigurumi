@@ -19,5 +19,5 @@
 
 #### 如果您想删掉对您的收录
 
-🙏 很抱歉对您带来了困扰！对仓库内容的修改在首页中有所[说明](https://app.gitbook.com/s/tkHWsQFMkamIkwBcdMlm/)。我们会积极配合 👌
+🙏 很抱歉对您带来了困扰！对仓库内容的修改在首页中有所[说明](./#ru-guo-nin-xiang-shan-chu-xiu-gai-ben-shou-ce-de-mou-xie-nei-rong)。我们会积极配合 👌
 
