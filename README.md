@@ -31,5 +31,6 @@
 
 * [Remi IO](https://twitter.com/Remi\_IO)&#x20;
 * [🍐](https://twitter.com/q2967922096)
+* [大白最黑](https://twitter.com/dabaizuihei)
 
 ![](https://avatars.githubusercontent.com/u/11187239?s=96\&v=4)
