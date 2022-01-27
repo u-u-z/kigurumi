@@ -7,9 +7,10 @@
 1. 🐣 [快速入门](get-start.md)
 2. 🏠 [工坊与店家](creator-workshop.md)
 3. 😋 开源模型
-4. 🐱  [活跃玩家](dalao.md)
-5. 🔧  [自制篇](DIY/)
+4. 🐱 [活跃玩家](dalao.md)
+5. 🔧 [自制篇](DIY/)
 6. 🎈 [群组社群](groups.md)
+7. 🎡 活动篇目
 
 旧版内容: [\<AWESOME KIGURUMI!!>](old\_content/)
 
@@ -29,7 +30,7 @@
 
 #### 参与者 & 贡献者
 
-* [Remi IO](https://twitter.com/Remi\_IO)&#x20;
+* [Remi IO](https://twitter.com/Remi\_IO)
 * [🍐](https://twitter.com/q2967922096)
 * [大白最黑](https://twitter.com/dabaizuihei)
 
