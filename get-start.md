@@ -33,7 +33,7 @@ Kigurumi 玩家入门的原因与方式各不相同：有的喜欢更加二次�
 
 ### 💰 财力
 
-> Kigurumi 在一些报道中被称为[“破产第四坑”](https://baike.baidu.com/tashuo/browse/content?id=114318e9aa9ccfeee6939776\&lemmaId=895536\&fromLemmaModule=pcRight\&lemmaTitle=kigurumi) 的存在，保持爱好的过程 ❤️ 是需要持续投入时间、经历、财力的。一些需要提前做好心理准备：
+> Kigurumi 在一些报道中被称为[“破产第四坑”](https://baike.baidu.com/tashuo/browse/content?id=114318e9aa9ccfeee6939776) 的存在，保持爱好的过程 ❤️ 是需要持续投入时间、经历、财力的。一些需要提前做好心理准备：
 
 可能需要投入达到 ¥5000 （CNY），在没有相关技能、能够屏蔽一些成本，完全依赖采购成品道具、Kigurumi 头壳、服饰的情况下（截止2022年）。
 
