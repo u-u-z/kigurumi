@@ -10,13 +10,14 @@
 4. 🐱 [活跃玩家](dalao.md)
 5. 🔧 [自制篇](DIY/)
 6. 🎈 [群组社群](groups.md)
-7. 🎡  活动篇
+7. 🎡 活动篇
 
-旧版内容: [\<AWESOME KIGURUMI!!>](old\_content/)
+旧版内容: [\<AWESOME KIGURUMI!!>](old_content/)
 
 ## 相关阅读
 
-[关于通过 FDM 制作头壳的小技巧](DIY/Tips-for-FDM.md) --作者：[@q2967922096](https://twitter.com/q2967922096)
+- [关于通过 FDM 制作头壳的小技巧](DIY/Tips-for-FDM.md) --作者：[@q2967922096](https://twitter.com/q2967922096)
+- [在 Blender 中通过 MMD(PMX)/VRM 制作头壳](./DIY/Tips-for-made-by-pmx-vrm.md) --作者：[Remi IO](https://twitter.com/Remi_IO)
 
 ## 关于本手册
 
@@ -30,8 +31,8 @@
 
 #### 参与者 & 贡献者
 
-* [Remi IO](https://twitter.com/Remi\_IO)
-* [🍐](https://twitter.com/q2967922096)
-* [大白最黑](https://twitter.com/dabaizuihei)
+- [Remi IO](https://twitter.com/Remi_IO)
+- [🍐](https://twitter.com/q2967922096)
+- [大白最黑](https://twitter.com/dabaizuihei)
 
-![](https://avatars.githubusercontent.com/u/11187239?s=96\&v=4)
+![](https://avatars.githubusercontent.com/u/11187239?s=96&v=4)

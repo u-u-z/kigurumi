@@ -1,6 +1,6 @@
 # 在 Blender 中通过 MMD(PMX)/VRM 制作头壳
 
-> 本文内容简单介绍 Blender 中通过 MMD(PMX) / VRM 模型制作用于3D打印的 Kigurumi 头壳模型的可行方案（总结过程，暂时不包括详细制作过程）
+> 本文内容简单介绍 Blender 中通过 MMD(PMX) / VRM 模型制作用于 3D 打印的 Kigurumi 头壳模型的可行方案（总结过程，暂时不包括详细制作过程）
 
 ### ![](../.gitbook/assets/image.png)
 
@@ -8,20 +8,20 @@
 
 主要工具：Blender - 用于模型编辑
 
-* Blender v3.5.0
-* Blender 插件（用于 VRM 格式模型）： [VRM-Addon-for-Blender](https://github.com/saturday06/VRM-Addon-for-Blender)
-* Blender 插件（用于 MMD PMX 格式模型）：[MMD Tools](https://github.com/UuuNyaa/blender\_mmd\_tools)
+- Blender v3.5.0
+- Blender 插件（用于 VRM 格式模型）： [VRM-Addon-for-Blender](https://github.com/saturday06/VRM-Addon-for-Blender)
+- Blender 插件（用于 MMD PMX 格式模型）：[MMD Tools](https://github.com/UuuNyaa/blender_mmd_tools)
 
 模型来源：可通过 [VRoidStudio](https://vroid.com/en/studio)（一个二次元风格捏脸系统）或 MMD 资源站
 
 ### 🍞 所需技能
 
-* 基本的 Blender 使用（无须精通）👉 [《Blender 手册》](https://docs.blender.org/manual/en/latest/index.html)
-  * 了解 Blender 基本使用流程：能够编辑场景元素、修改 Object 的属性
-  * 了解 Object 可以通过 Vertex Group、Shape Keys 控制表情、“神态”
-  * 了解 Blender mesh （bmesh）常识，能够在 editor mode 中完成对多边形点线面基本操作
-  * 了解 Blender 常用修改器用途，如：Remesh、Solidify、Decimate、Subdivision Surface 等
-  * 熟悉 Blender UI 能够正确安装、使用插件功能，如：Mesh: 3D-Print Toolbox 插件
+- 基本的 Blender 使用（无须精通）👉 [《Blender 手册》](https://docs.blender.org/manual/en/latest/index.html)
+  - 了解 Blender 基本使用流程：能够编辑场景元素、修改 Object 的属性
+  - 了解 Object 可以通过 Vertex Group、Shape Keys 控制表情、“神态”
+  - 了解 Blender mesh （bmesh）常识，能够在 editor mode 中完成对多边形点线面基本操作
+  - 了解 Blender 常用修改器用途，如：Remesh、Solidify、Decimate、Subdivision Surface 等
+  - 熟悉 Blender UI 能够正确安装、使用插件功能，如：Mesh: 3D-Print Toolbox 插件
 
 ### 🚧 实施流程
 
@@ -38,7 +38,7 @@
 11. （调整结构）
 12. 使用 Decimate 修改器降低 Mesh 面数
 13. 使用 Solidify 修改器为头壳增加厚度
-14. 使用 Remesh 修改器重构结构，重构后模型将易于3D打印
+14. 使用 Remesh 修改器重构结构，重构后模型将易于 3D 打印
 15. 通过 Export 导出为 STL 格式文件
 
 ![](<../.gitbook/assets/image (2).png>)
