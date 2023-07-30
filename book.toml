@@ -1,0 +1,5 @@
+[book]
+authors = ["RemiIO"]
+language = "zh-CN"
+title = "Kigurumi 不完全手册"
+src = "./"
