@@ -53,3 +53,7 @@
 ## 旧版内容（2021 年前）
 
 [\<AWESOME KIGURUMI!!>](old_content/)
+
+## 其他
+
+网站使用 [🦀️ Rustacean](https://rustaceans.org/) （Rust 语言开发者们）热爱的 [mdbook](https://github.com/rust-lang/mdBook) 在 [Github Actions](https://github.com/features/actions) 中构建，托管在免费的 [Cloudflare Pages](https://pages.cloudflare.com/) 平台服务，感谢你们！
