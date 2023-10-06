@@ -16,6 +16,7 @@
   - [通过 FDM 制作头壳的小技巧](./DIY/Tips-for-FDM.md) --作者：[@q2967922096](https://twitter.com/q2967922096)
   - [ MMD(PMX)/VRM 制作头壳 (blender)](./DIY/Tips-for-made-by-pmx-vrm.md) --作者：[Remi IO](https://twitter.com/Remi_IO)
   - [自喷漆](./DIY/Tips-for-painting.md) --作者：[Remi IO](https://twitter.com/Remi_IO)
+  - [假发造型（参考资料）](./DIY/wigs-ref.md)
 
 # 活动
 
