@@ -1,0 +1,357 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>自喷漆 - Kigurumi 不完全手册</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="这是一个记录 Kigurumi 折腾过程的手册，从入门、自制、活动、社区、店铺等，还有一些经验，希望能覆盖到 Kigurumi 玩家活动的方方面面。">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Kigurumi 不完全手册</li><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> 👏 欢迎来到《Kigurumi 不完全手册》</a></li><li class="chapter-item expanded "><a href="../get-start.html"><strong aria-hidden="true">2.</strong> ⚡ 快速入门 Kigurumi</a></li><li class="chapter-item expanded affix "><li class="part-title">生态</li><li class="chapter-item expanded "><a href="../creator-workshop.html"><strong aria-hidden="true">3.</strong> 🏠 工坊与店家</a></li><li class="chapter-item expanded "><a href="../dalao.html"><strong aria-hidden="true">4.</strong> 🐯 活跃玩家</a></li><li class="chapter-item expanded affix "><li class="part-title">自制 Kigurumi</li><li class="chapter-item expanded "><a href="../DIY/index.html"><strong aria-hidden="true">5.</strong> 🛠 自制篇</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../DIY/Tips-for-FDM.html"><strong aria-hidden="true">5.1.</strong> 通过 FDM 制作头壳的小技巧</a></li><li class="chapter-item expanded "><a href="../DIY/Tips-for-made-by-pmx-vrm.html"><strong aria-hidden="true">5.2.</strong>  MMD(PMX)/VRM 制作头壳 (blender)</a></li><li class="chapter-item expanded "><a href="../DIY/Tips-for-painting.html" class="active"><strong aria-hidden="true">5.3.</strong> 自喷漆</a></li><li class="chapter-item expanded "><a href="../DIY/wigs-ref.html"><strong aria-hidden="true">5.4.</strong> 假发造型（参考资料）</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">活动</li><li class="chapter-item expanded "><a href="../groups.html"><strong aria-hidden="true">6.</strong> 群组社群</a></li><li class="chapter-item expanded affix "><li class="part-title">陈旧的内容（已作废）</li><li class="chapter-item expanded "><a href="../old_content/index.html"><strong aria-hidden="true">7.</strong> AWESOME KIGURUMI!!</a></li><li class="chapter-item expanded "><a href="../old_content/SHOP.html"><strong aria-hidden="true">8.</strong> 在可以采购物品的店铺（大陆）</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Kigurumi 不完全手册</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="自喷漆"><a class="header" href="#自喷漆">自喷漆</a></h1>
+<blockquote>
+<p>对于个人玩家 / 自制玩家而言，喷漆也许是挺让人摸不到头脑的事情，</p>
+<p>需要一些经验、实践来掌握这个技能。</p>
+<p>本文是一次喷漆过程、遇到问题的记录，能覆盖到大部分问题。</p>
+<p>😉 你也许一个小时就会了</p>
+</blockquote>
+<blockquote>
+<p>🔞 未成年人请在监护人的陪同下完成相关操作</p>
+</blockquote>
+<h2 id="-一些提示"><a class="header" href="#-一些提示">⚠️ 一些提示</a></h2>
+<ul>
+<li>做好防护！</li>
+<li>保持良好的心态 —— 因为有很多补救措施</li>
+<li>没有必要，喷漆追求 “一次喷好” 一步到位，技艺可以慢慢提高</li>
+<li>只是制作 Kigurumi 不必追求完全的装备（差生文具多）</li>
+</ul>
+<h2 id="-防护用品"><a class="header" href="#-防护用品">⛑️ 防护用品</a></h2>
+<ul>
+<li>3M 防毒面具 6200 套装 （喷漆工作者常用，推荐）</li>
+<li>3M 防喷溅眼镜</li>
+<li>丁腈橡胶手套 / 一次性手套</li>
+<li>防水劳保套袖</li>
+</ul>
+<blockquote>
+<p>注意：请认真阅读防护用品使用说明，确保正常使用，及时更换耗材 ⚠️</p>
+</blockquote>
+<h2 id="-所需材料"><a class="header" href="#-所需材料">🍞 所需材料</a></h2>
+<p>考虑到个人（非模型玩家）准备喷枪 / 喷笔、模型工具、调漆、气泵及使用存在一定门槛、并且复用性较低。本文只描述使用自喷漆（使用喷罐）的过程。另外，喷涂着色作业是灵活多变的，关于所使用漆料的价格、优劣，也能够搜索到很多讨论。每个人观点不同，材料内容仅供参考。</p>
+<blockquote>
+<p>关于非自喷罐、调漆、气泵的喷涂作业，将会在其他章节中描述</p>
+</blockquote>
+<blockquote>
+<p>注意：使用自喷漆罐，请认真阅读使用说明，请勿刺穿、挤压、火烤自喷漆罐，避免发生爆炸 💥</p>
+</blockquote>
+<ul>
+<li>自喷漆：肌肤色
+<ul>
+<li>三和 313 浅粉色（便宜）</li>
+<li>郡士 s111 半光泽肌肤色</li>
+<li>郡士 s112 半光泽肌肤色</li>
+</ul>
+</li>
+<li>自喷漆：舌头、嘴部
+<ul>
+<li>三和 350 捷达红（便宜）</li>
+<li>郡士 63 光泽粉红色</li>
+<li>··· </li>
+</ul>
+</li>
+<li>底漆：
+<ul>
+<li>郡士 / 田宫 水补土</li>
+<li>三和 40 白色（便宜）</li>
+<li>原子灰（可选）</li>
+</ul>
+</li>
+<li>消光漆（哑光油）
+<ul>
+<li>三和 191 哑光油 （便宜）</li>
+<li>田宫 TS-80 消光透明保护漆</li>
+</ul>
+</li>
+<li>补救用品（推荐备齐）
+<ul>
+<li>砂纸：300 目、500 目、800 目、1000 目、2000 目，各准备 2-3 张</li>
+</ul>
+</li>
+<li>喷漆环境：
+<ul>
+<li>光线正常，避免过于阴暗</li>
+<li>湿度不推荐高于 70% 温度 20-30 度均可（建议仔细阅读喷罐产品说明）</li>
+<li>不会影响到他人正常工作与休息、造成纠纷</li>
+<li>楼顶天台、消防楼道</li>
+<li>室外风向，喷漆作业者应置于上风向（避免喷一脸）</li>
+<li>室内，有条件可准备喷涂作业负压箱，若无，为了家人的身体安全与健康，建议避免在室内喷涂作业。另外室内作业应避免“窝风”（由于漆料喷出干燥后气流带动干燥后的漆料附着到模型表面形成颗粒）</li>
+</ul>
+</li>
+</ul>
+<h2 id="喷漆前准备"><a class="header" href="#喷漆前准备">喷漆前准备</a></h2>
+<p>前置条件：正确使用防护用品 &amp;&amp; 正确使用作业场地。</p>
+<p>喷漆前，应仔细阅读说明，均匀摇晃自喷罐，确保喷罐中的漆料均匀。</p>
+<ul>
+<li>了解、悉知——正确的使用防护用品，若感到不适及时停止作业，不适严重应及时就医。</li>
+<li>了解、知悉——正确的喷罐使用方法，如：距离着色面 15-20 cm 在着色面外按压喷罐口后扫喷，由于文本不能很好的表达自喷罐使用过程，推荐通过视频教学学习。</li>
+<li>了解、知悉——漆料附着至物体表面前经过不同湿度、温度的空气，附着后的干燥程度、状态会有不同的表现，请在喷漆前完成喷涂测试后，根据实际情况进行正式作业。</li>
+</ul>
+<p>喷漆前，对 Kigurumi 壳体表面完成清洁工作</p>
+<ul>
+<li>可通过打磨实现表面更好的附着漆料</li>
+<li>清洁干净，避免油污</li>
+</ul>
+<p>若存在轻微伤痕、凹陷，可通过水补土补充，可视情况使用砂纸打磨实现表面平整。若凹陷严重，可通过原子灰补充，使用原子灰后应使用砂纸打磨，使其原子灰与凹陷伤痕周围“融合”。（水性原子灰比起油性原子灰使用更加方便）</p>
+<h2 id="喷漆作业"><a class="header" href="#喷漆作业">喷漆作业</a></h2>
+<ul>
+<li>使用自喷罐喷漆时，先摇匀喷罐，先在其他物体上喷漆，确保喷罐中的漆料均匀。</li>
+<li>扫喷、少量多次，不要一次喷太多，避免漆料流淌、滴落。</li>
+<li>扫喷应在模型外部（为了确保效果，浪费一些是正常的）按下喷口开始喷漆，扫过模型，松开喷口。</li>
+<li>逐行喷涂，避免遗漏。每一行的喷涂覆盖应该有 50% 的重叠。</li>
+<li>确保喷罐气压稳定，若喷罐气压不稳定，应停止喷涂，更换喷罐。</li>
+<li>喷涂过程中，应保持喷罐与模型的距离，避免喷罐与模型的距离过近，造成漆料流淌、滴落。</li>
+<li>注意喷涂作业过程中的通风，若在室内环境，应尽量避免喷涂后在空中干燥的漆料附着到模型表面，造成颗粒。</li>
+<li>若出现 颗粒、“鼻涕”、“吐痰” 现象不必害怕，可以通过打磨、水补土、原子灰、消光漆等手段进行补救，请保持正常心态。</li>
+<li>喷涂作业过程中不要随意触碰模型表面，避免造成指纹、油污等。</li>
+<li>喷涂作业过程中不要随意撤下、摘掉防护用品。</li>
+<li>不要在大雨中喷涂。</li>
+<li>喷涂完整一层后，应等待 3 分钟，确保漆料表面干燥后再进行下一层喷涂。
+<ul>
+<li>由于不同品牌漆料漆性不同，三和漆料建议等待 3 分钟，郡士漆料建议等待 5 分钟。</li>
+</ul>
+</li>
+<li>若喷涂过程中有出现未完整覆盖的表面，请勿直接喷涂，应等待该层漆料干燥后，通过下一层的喷涂过程覆盖。</li>
+<li>喷涂顺序应该是：底漆/水补土 -&gt; 肌肤色漆（偏粉色）-&gt; 肌肤色漆（偏黄色）-&gt; 清漆（消光/哑光）/保护漆。</li>
+</ul>
+<h2 id="补救措施"><a class="header" href="#补救措施">补救措施</a></h2>
+<h3 id="颗粒橘皮鼻涕吐痰"><a class="header" href="#颗粒橘皮鼻涕吐痰">颗粒（“橘皮”）、“鼻涕”、“吐痰”</a></h3>
+<ul>
+<li>颗粒/橘皮：使用三和漆料和喷涂新手的常见现象，若不严重，等待喷涂漆料干燥后，请使用 1500/3000 目砂纸打磨，直到颗粒消失，补充色漆或消光漆。若严重，可使用 800 目砂纸打磨，补充色漆或消光漆。</li>
+<li>“鼻涕”/“吐痰”：可能是自喷罐气压不稳或没有正确按压喷口导致，处理方法与上述相同，若不严重，等待喷涂漆料干燥后，请使用 1500/3000 目砂纸打磨，直到颗粒消失，补充色漆或消光漆。若严重，可使用 800 目砂纸打磨，补充色漆或消光漆。</li>
+</ul>
+<h3 id="关于局部补充漆"><a class="header" href="#关于局部补充漆">关于局部补充漆</a></h3>
+<ul>
+<li>确保颜色（或各颜色的喷涂量）正确</li>
+</ul>
+<h2 id="喷漆后处理"><a class="header" href="#喷漆后处理">喷漆后处理</a></h2>
+<ul>
+<li>参考补救措施章节，处理喷涂过程中出现的问题</li>
+<li>完成基本喷涂作业后，可根据需要厚喷消光/光油 根据需要打磨，完成喷涂作业</li>
+<li>水贴纸贴合后也可再次进行消光漆喷涂配合 3000 目砂纸打磨避免贴纸周边“棱角严重”</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../DIY/Tips-for-made-by-pmx-vrm.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../DIY/wigs-ref.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../DIY/Tips-for-made-by-pmx-vrm.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../DIY/wigs-ref.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
