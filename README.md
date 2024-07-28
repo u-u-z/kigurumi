@@ -35,6 +35,7 @@
 - [cnkigurumi](http://www.cnkigurumi.com) - 这是一个为爱发电的小网站 “希望可以为你带来快乐”
 - [kigguide](https://kigguide.com/) - a small site dedicated to the kigurumi subculture.
 - [openkig](http://openkig.com/) - Come and share your Kig creations with us on our facebook page! Read More. Downloads. Download a mask and 3d print it up!
+- [kigurumi-animegao.fr](https://kigurumi-animegao.fr/) - Hhosted and developed by Odd_HD in collaboration with Schizu_Emyu to regroup the informations related to the kigurumi hobby.
 
 ## 帮助我们
 
