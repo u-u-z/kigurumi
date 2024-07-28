@@ -1,0 +1,6 @@
+[book]
+authors = ["RemiIO"]
+language = "zh-CN"
+title = "Kigurumi 不完全手册"
+src = "./"
+description = "这是一个记录 Kigurumi 折腾过程的手册，从入门、自制、活动、社区、店铺等，还有一些经验，希望能覆盖到 Kigurumi 玩家活动的方方面面。"

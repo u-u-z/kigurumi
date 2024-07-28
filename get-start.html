@@ -1,0 +1,393 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>⚡ 快速入门 Kigurumi - Kigurumi 不完全手册</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="这是一个记录 Kigurumi 折腾过程的手册，从入门、自制、活动、社区、店铺等，还有一些经验，希望能覆盖到 Kigurumi 玩家活动的方方面面。">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Kigurumi 不完全手册</li><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> 👏 欢迎来到《Kigurumi 不完全手册》</a></li><li class="chapter-item expanded "><a href="get-start.html" class="active"><strong aria-hidden="true">2.</strong> ⚡ 快速入门 Kigurumi</a></li><li class="chapter-item expanded affix "><li class="part-title">生态</li><li class="chapter-item expanded "><a href="creator-workshop.html"><strong aria-hidden="true">3.</strong> 🏠 工坊与店家</a></li><li class="chapter-item expanded "><a href="dalao.html"><strong aria-hidden="true">4.</strong> 🐯 活跃玩家</a></li><li class="chapter-item expanded affix "><li class="part-title">自制 Kigurumi</li><li class="chapter-item expanded "><a href="DIY/index.html"><strong aria-hidden="true">5.</strong> 🛠 自制篇</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="DIY/Tips-for-FDM.html"><strong aria-hidden="true">5.1.</strong> 通过 FDM 制作头壳的小技巧</a></li><li class="chapter-item expanded "><a href="DIY/Tips-for-made-by-pmx-vrm.html"><strong aria-hidden="true">5.2.</strong>  MMD(PMX)/VRM 制作头壳 (blender)</a></li><li class="chapter-item expanded "><a href="DIY/Tips-for-painting.html"><strong aria-hidden="true">5.3.</strong> 自喷漆</a></li><li class="chapter-item expanded "><a href="DIY/wigs-ref.html"><strong aria-hidden="true">5.4.</strong> 假发造型（参考资料）</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">活动</li><li class="chapter-item expanded "><a href="groups.html"><strong aria-hidden="true">6.</strong> 群组社群</a></li><li class="chapter-item expanded affix "><li class="part-title">陈旧的内容（已作废）</li><li class="chapter-item expanded "><a href="old_content/index.html"><strong aria-hidden="true">7.</strong> AWESOME KIGURUMI!!</a></li><li class="chapter-item expanded "><a href="old_content/SHOP.html"><strong aria-hidden="true">8.</strong> 在可以采购物品的店铺（大陆）</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Kigurumi 不完全手册</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="-快速入门"><a class="header" href="#-快速入门">⚡ 快速入门</a></h1>
+<p>💾 推荐阅读：<a href="https://zh.moegirl.org.cn/zh-hans/Kigurumi">《Kigurumi - 萌娘百科》词条</a>（很多玩家通过搜索引擎找到的第一份资料）</p>
+<p>这里仅提供 “人偶扮演” 日语：着ぐるみ 的入门参考，可能不适用于 “兽装”（Furry）。</p>
+<h2 id="-准备"><a class="header" href="#-准备">🎯 准备</a></h2>
+<p>Kigurumi 玩家入门的原因与方式各不相同：有的喜欢更加二次元风格的 Cosplay，有的想尝试追求有趣、刺激的体验。有着 3D 艺术建模经验的玩家可以自己完成 Kigurumi 头壳的素体设计，具有 Cosplay 丰富经验的玩家能够制作道具、服饰，修剪 Kigurumi 头壳的假毛（假发）制作造型。</p>
+<p>主要的准备过程：</p>
+<ol>
+<li>确保足够多的财力（&gt;= ¥5000 CNY），避免投入过半破产；</li>
+<li>确定一个目标角色；</li>
+<li>定制/定做 Kigurumi 头壳；</li>
+<li>定制/定做 Kigurumi 皮（紧身衣）；</li>
+<li>采购该角色的服饰（Cosplay 服装）、道具、饰品；</li>
+<li>尝试，试穿、调整着装后的样式、状态；</li>
+<li>练习（表演技能） POSE，探索适合的拍照动作、姿态；</li>
+</ol>
+<h3 id="-角色"><a class="header" href="#-角色">🐱 角色</a></h3>
+<p>从一个<strong>角色</strong>开始，由这个角色制造的 Kigurumi 头壳将陪伴你很久 ··· </p>
+<ul>
+<li>当代流行的 “人气角色” 将有助于快速得到关注；</li>
+<li>选择 “自己喜欢的角色” / “自设” 保持活跃，也是可行的；</li>
+</ul>
+<blockquote>
+<p>Kigurumi 究竟算不算是一种「Cosplay」不必深究 ···</p>
+</blockquote>
+<h3 id="-财力"><a class="header" href="#-财力">💰 财力</a></h3>
+<blockquote>
+<p>Kigurumi 在一些报道中被称为<a href="https://baike.baidu.com/tashuo/browse/content?id=114318e9aa9ccfeee6939776">“破产第四坑”</a> 的存在，保持爱好的过程 ❤️ 是需要持续投入时间、经历、财力的。一些需要提前做好心理准备：</p>
+</blockquote>
+<p>可能需要投入达到 ¥5000 （CNY），在没有相关技能、能够屏蔽一些成本，完全依赖采购成品道具、Kigurumi 头壳、服饰的情况下（截止 2022 年）。</p>
+<ul>
+<li>Kigurumi 头壳制造一般在 2500 元 -- 5000 元之间不等，取决于难度、制造速度；</li>
+<li>Kigurumi 皮的定制价格一般在 400 -- 800 元左右，取决于布料、拉锁位置、衣物细节；</li>
+</ul>
+<h3 id="-闷热"><a class="header" href="#-闷热">🫠 闷热</a></h3>
+<p>Kigurumi 的过程体验起来是十分闷热的，Kigurumi 头壳内部只有很有限的通风。</p>
+<blockquote>
+<p>虽然一些 Kigurumi 头壳制造店家会在制品中加入风扇增加散热效率。</p>
+</blockquote>
+<h3 id="-其他"><a class="header" href="#-其他">😄 其他</a></h3>
+<p>还有一些持续投入：</p>
+<ul>
+<li>衣物（<del>妈妈会问你的衣柜里为何有很多女装</del>👚）;</li>
+<li>需要掌握（小学二年级）手工技巧，维护修复道具、物件；</li>
+<li>学会穿搭、打扮，寻找可爱、有趣的道具（例如：发夹、头饰、随身饰品等）；</li>
+<li>出片、游场 和 Cosplay 玩家一样需要做足准备；</li>
+<li>良好的饮食习惯，保持好的身材，避免发福；</li>
+<li>乐观的面对各种挑战、解决问题；</li>
+<li>可能会被一些不明人士（性）骚扰；</li>
+</ul>
+<p>上述情况是玩家在经历中比较常见的，每个人的目的、方式、做法不同；</p>
+<hr />
+<h2 id="-初次采购"><a class="header" href="#-初次采购">💸 初次采购</a></h2>
+<blockquote>
+<p>⌛️ 漫长的等待：由于很多类似这样的 均为 C2C 业务产能有限，Kigurumi 头壳制作过程时间需要 1-3 个月，甚至“产能不足”的情况下需要等待半年到一年。</p>
+</blockquote>
+<h3 id="-什么是有效沟通"><a class="header" href="#-什么是有效沟通">💬 什么是有效沟通？</a></h3>
+<p>任何<strong>定制服务</strong>的行业从业者，都不会喜欢 “乱改需求的甲方”。Kigurumi 用品的制作大多是量身定制的，任何确定需求后的修改给双方带来的麻烦是无比巨大的！建立良好有效的沟通对于买卖双方十分重要。我们执行采购行为时需要：</p>
+<ul>
+<li>认真的组织语言；</li>
+<li><strong>清楚</strong>、<strong>详细</strong>但<strong>不啰嗦</strong>的描述所表达的内容；</li>
+<li>尊重每一个人；</li>
+<li><a href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md"><strong>学会提问</strong></a>，有效的提问（很多店家还是对认真可爱的孩子耐心十足的 ^_^）；</li>
+<li>在需求确定后，任何的修改，请带着“<strong>需要支付额外修改成本</strong>”的准备、觉悟；</li>
+</ul>
+<blockquote>
+<p>笔者并非从事 Kigurumi 用品制作，但是从事定制服务行业。这是从买家、卖家立场共同思考的想法。</p>
+</blockquote>
+<h3 id="-从-kigurumi-头壳制造工坊店家采购头壳"><a class="header" href="#-从-kigurumi-头壳制造工坊店家采购头壳">🏠 从 Kigurumi 头壳制造工坊店家采购头壳</a></h3>
+<h4 id="决定-kigurumi-头壳样式"><a class="header" href="#决定-kigurumi-头壳样式">决定 Kigurumi 头壳样式</a></h4>
+<p>按风格区分，主要有：<code>BJD 风格</code>与 <code>二次元风格</code>（本文档暂时主要描述二次元风格 Kigurumi 头壳）；<br />
+按结构区分，常见的工坊店家提供：<code>半面</code>、<code>3/4头</code>、<code>全头</code>；</p>
+<p>选择风格、结构将决定了角色形式以及佩戴体验；</p>
+<blockquote>
+<p>咱的头壳是半面头壳，目前遇到了 “后脑勺看起来是凹陷下去的，看起来十分奇怪” 的问题 ···</p>
+</blockquote>
+<blockquote>
+<p>“如果没有什么其他癖好的话 3/4 的头壳 刚刚好” — 小林 泉</p>
+</blockquote>
+<h4 id="提供您的基本身体数据"><a class="header" href="#提供您的基本身体数据">提供您的基本身体数据</a></h4>
+<p>漫画有 “五头身”、“六头身” 比例概念。恰到好处的头身比例将会为您带来更好的效果，同时也便于 Kigurumi 头壳更好的佩戴、固定。您需要准备这些数据：身高、体重、头高、头围、头宽、眼睛位置；</p>
+<ul>
+<li>身高、体重：决定投身比例的基础；</li>
+<li>头高、头宽、头围：通常情况下，Kigurumi 头壳的固定需要“<strong>下颌骨</strong>”与“<strong>头部顶骨</strong>”上方调节好厚度的海绵配合，这需要头高数据配合。</li>
+</ul>
+<blockquote>
+<p><strong>⚠️ 请务必按照店家的指导提供准确的数据</strong>，自行增减尺寸只会带来麻烦，甚至导致成品无法正常使用。</p>
+</blockquote>
+<h4 id="描述角色细节"><a class="header" href="#描述角色细节">描述角色细节</a></h4>
+<p>🙏 为了避免翻车，<strong>请务必充足、完整、全面的描述角色的细节</strong>，与制作者建立认真、良好的沟通，有效的回应店家的提问非常重要！角色的细节包括，但不限于：</p>
+<ul>
+<li><strong>设定</strong>：越多越好的参考图，有助于让制作者快速搞清楚“要做什么”；</li>
+<li><strong>表情</strong>：可以先调查一下漫画中的人物表情，一个“恰到好处”的表情会让可爱值++（<del>比如高 chao 脸</del>）；</li>
+<li><strong>毛发颜色</strong>：会通过毛色“色卡”多次确认，由于拍照会存在一定色差，可能需要谨慎选择，多沟通；</li>
+<li><strong>风格</strong>：因为不同的漫画、插画、二次创作作品的作者表达形式、风格不同，需要有效的与 Kigurumi 制作者沟通好 角色的呈现风格。这可能将决定 Kigurumi 头壳的“脸型”；</li>
+<li><strong>素材</strong>：如果条件允许，有角色素材可以提供店家。例如“眼睛贴片”素材，可爱的眼睛可以为角色“赋予生命力”；</li>
+<li><strong>异形制作、装饰品物件</strong>：角色是很难免会避免存在头部饰品、异形的情况，例如：犄角造型、尖耳朵等。需要提前确定好，<strong>这些结构由买家准备</strong>或<strong>者置于 3D 模型中。</strong></li>
+<li><strong>假发（假毛）</strong>：可以向店家申请色卡选色，也可以提供角色对应的 cosplay 假发来提供店家查看。“马尾”发饰的角色，可以根据个人喜好额外申请做成假发夹子。（一些玩家会热衷于自扎马尾，一些玩家觉得用老虎夹制作的假发单独取下大沥方便）</li>
+</ul>
+<p>对于定制方发起的提问也要认真思考后作出有效回答。卖萌可取，务必适度。</p>
+<h4 id="确定购买付款周期"><a class="header" href="#确定购买付款周期">确定购买、付款周期</a></h4>
+<p>Kigurumi 头壳的定制周期由于受到<strong>原材料价格</strong>、<strong>供需关系</strong>的影响，<strong>制作周期</strong>、<strong>产能</strong>的稳定性不是很强。需要玩家有足够多的耐心。一些定制工坊店家的开售机会也比较固定，需要多多的收集信息（本文档在后续章节将会提供更多信息）。 由于 “订单队列” 名额有限，<strong>一般制作周期有 1-3 个月不等</strong>，有些甚至遇到 “需要等半年多” 的情况。<strong>这些情况需要积极的与工坊店家沟通，确认工期，以及是否需要额外支付加急费用提高生产速度</strong>。</p>
+<p>当然可以同一些 Kigurumi 玩家交流，了解当前周期的产能分布情况。对于制作生产速度、效果、质量的关系，是仁者见仁智者见智的，这充满着个人主观的想法、看法，请不要产生“存在关系”的无端联想。<strong>在建立良好的沟通的情况下，生产速度快的工坊店家制作效果也会很好</strong>。</p>
+<p>付款事项一般分为：订金、尾款、加急费用（可选）；</p>
+<p>作为购买者，我们需要清楚：<strong>快速、及时的付款是表现 “积极配合” 的最好方式</strong>，制作方由于接触大量业务、订单，对于没有办法积极付款、比较消极的购买者，反馈可能会是相对消极的。这会极大的影响订单流程的体验。</p>
+<blockquote>
+<p>一些工坊店家会精心的为“金主”提供可爱的定金支付凭证！</p>
+</blockquote>
+<h4 id="耐心等待"><a class="header" href="#耐心等待">耐心等待</a></h4>
+<p>之后是无尽的等待 ⌛️，这需要一些耐心。虽然在这个过程会充满着兴奋与期待。</p>
+<h3 id="-从-kigurumi-紧身衣店家采购皮"><a class="header" href="#-从-kigurumi-紧身衣店家采购皮">🏠 从 Kigurumi 紧身衣店家采购“皮”</a></h3>
+<p>在下文中将会直接使用“皮”代表 Kigurumi 玩家所使用的紧身衣。</p>
+<blockquote>
+<p><strong>⚠️ 重要的事情说三遍：不要用皮直接碰魔术贴！不要用皮直接碰魔术贴！不要用皮直接碰魔术贴！</strong></p>
+</blockquote>
+<h4 id="确认皮属性样式功能"><a class="header" href="#确认皮属性样式功能">确认皮属性、样式、功能</a></h4>
+<p>默认情况下，皮是一件 “全身包裹” 的连体紧身衣，背部设有拉锁便于穿入。可选面部“开窗”方式决定是否漏出面部“便于良好的使用视觉能力”。覆盖包括手、足、头部，玩家需要根据自身需求与店家沟通。</p>
+<p>皮的样式、属性功能主要包括：</p>
+<ul>
+<li><strong>颜色</strong>：<strong>肉粉色</strong>、<strong>肤色</strong>等基本颜色，当然这取决于角色设定或者目标效果。也有玩家会选择白色、黑色的皮。二次元角色玩家大多会选择 “肉粉色”；</li>
+<li><strong>面部开窗</strong>：可选择<code>露出面部</code>、<code>露出眼睛（也可以选择两个眼睛洞x）</code>、<code>面部全覆盖包裹</code> 等开窗样式；</li>
+<li><strong>胸部制作</strong>：由于二次元角色设定需要，胸部可以进行额外加工，需要玩家提前调查角色的胸部尺寸与比例与店家沟通。需要额外胸部制作的主要从 “B 罩杯” 尺寸开始；</li>
+<li><strong>指甲制作</strong>：一些店家提供皮手部的指甲制作，可以选择指甲颜色、类型、长度等定制；</li>
+<li><strong>拉锁制作</strong>：一般店家支持多种不同的拉锁样式，以及在身体不同的部位开设拉锁。例如：
+<ul>
+<li>在手腕内侧开设拉锁便于在需要的时候使用手，避免污染手部皮；</li>
+<li>在裆部开设拉锁，在卫生间时会比较方便；</li>
+</ul>
+</li>
+<li><strong>“异形”制作</strong>：根据<strong>角色设定</strong>或<strong>玩家实际需要</strong>，可以与店家沟通，在身体的任何位置对皮进行“额外的修改”，便于安装或穿戴道具；</li>
+</ul>
+<h4 id="采集身体数据"><a class="header" href="#采集身体数据">采集身体数据</a></h4>
+<p>因为皮是完全贴身的，对于店家来说准确的身体尺寸、数据额外重要。</p>
+<p>包括但不限于：性别、身高、体重、肩宽、上身长、胸围、腰围、臀围、内侧腿长、横档、脚腕、鞋码、内侧壁长、袖肥、手腕、掌围、中指长、头围、脖围、脸长。具体在与店家的沟通过程中</p>
+<p>🙏 务必请认真准确的采集、测量这些数据，积极有效的与店家沟通。**不要因为自己不满意于自己的身材指标而瞒报数据，**这样做是愚蠢的，将会影响到实际效果，甚至无法穿上皮。</p>
+<h4 id="确定订单付款"><a class="header" href="#确定订单付款">确定订单、付款</a></h4>
+<p>在基本的身体尺寸数据和皮的样式属性决定好后，与店家沟通下单就好。一般是一次性付清全部款项，制作周期相对 Kigurumi 头壳要快一些，一般 7-14 天 即可发货，额外是物流的运送时间。</p>
+<h3 id="-采购角色服饰"><a class="header" href="#-采购角色服饰">👗 采购角色服饰</a></h3>
+<blockquote>
+<p>追求还原度是值得尊敬的，但也请根据自身情况注意避暑与防寒保暖 🙏</p>
+</blockquote>
+<h4 id="cosplay-角色服饰"><a class="header" href="#cosplay-角色服饰">Cosplay 角色服饰</a></h4>
+<p>二次元角色主要以 Cosplay 服饰为主，比较容易确定搭配、样式，便于采购，无需在穿搭方面绞尽脑汁。适合快速入门，在初次采购的情况下是十分推荐的。</p>
+<h4 id="日常服饰"><a class="header" href="#日常服饰">日常服饰</a></h4>
+<p>需要一些时间积累的穿衣搭配的经验积累（<del>女装经验</del>），在初期可以选择购买“套装”服饰，会存在撞衫风险，同时对身材也有一些要求。可爱即正义！</p>
+<h4 id="饰品"><a class="header" href="#饰品">饰品</a></h4>
+<p>“恰到好处”的饰品在角色效果上十分重要，请不要忽视。当然也是需要一些时间与经验积累。</p>
+<h2 id="-备品采购"><a class="header" href="#-备品采购">🔧 备品采购</a></h2>
+<p>对于刚刚入门的玩家，“备品”并非是必要的，因为需要一些工具的使用需要经验、掌握一些技巧。对于曾经有过 Cosplay 经验的玩家，这些备品应该是相对熟悉的。这里介绍主要的采购思路，未来将会在后面章节中开展介绍更多手工制作工具、耗材的详细介绍。</p>
+<h3 id="采购原则"><a class="header" href="#采购原则">采购原则</a></h3>
+<ol>
+<li><strong>以头壳生命周期维护为主</strong>：头壳 “化妆制作” 中所涉及的材料需要有所准备。例如：肤色漆料（主要以罐装漆为主）、眼部纱网、眼部贴片绒面相纸、嘴部红色布料、眼线、薄 EVA 泡绵、高密度海绵、魔术贴等。头壳假毛的维护主要有木梳、发网、护理液等。维护头壳固定结构，需要长期维护的主要以胶、粘合剂为主，如：热熔胶枪、热熔胶棒、无痕胶、AB 胶等。一般在活动进行前维护，支撑一次活动的生命周期，并准备一些便于携带的备品避免突发、紧急情况；</li>
+<li><strong>考虑活动方式、场地</strong>：单次活动前的取决于玩家“更喜欢参与”的活动类型，例如：游场出街、正片拍摄。从 “<strong>效果</strong>”、“<strong>便携性</strong>”、“<strong>成本</strong>” 等多个角度进行选择。一般情况下：追求效果会带来随之而来的成本与极差的可便携性，便携性的道具可能不会带来很好的拍摄效果，但是有助于提高游场、出街、店铺营业等需要“高实时性”场景效果；</li>
+<li>利于交互与作品内容表达；</li>
+</ol>
+<h3 id="通用"><a class="header" href="#通用">通用</a></h3>
+<ul>
+<li><strong>热熔胶枪、热熔胶棒</strong>：手作、手工必备！应急情况之“良药”（<strong>注意避免烫伤！</strong>）在任何时候你都会需要它。在出片、游场时必备！在别人的物品出现问题时，拿出热熔胶的你一定是人群中的焦点！总之，这是一个非常非常非常必要的备品、工具，你可以使用它解决大多数问题。</li>
+</ul>
+<h3 id="假发假毛"><a class="header" href="#假发假毛">假发、假毛</a></h3>
+<p>大多数的 Kigurumi 的假毛材质与 Cosplay 假毛相同，维护工具主要有：</p>
+<ul>
+<li>木梳：主要以钢制木梳为主，也可以选购王妃梳（来自 <a href="https://twitter.com/re_night_kig">@归小夜</a> <a href="https://twitter.com/re_night_kig/status/1482696217066754052">推荐</a>）</li>
+<li>发网：隐形发网、网兜，用于整理、收纳假毛，避免弄伤，延长使用寿命；</li>
+<li>假发护理液：粉色的瓶子，配合金属木梳使用；</li>
+</ul>
+<h3 id=""><a class="header" href="#"></a></h3>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="creator-workshop.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="creator-workshop.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
