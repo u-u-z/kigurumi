@@ -15,6 +15,6 @@
 | NFD新颜玩偶New Face | 新颜玩偶（Unknown）     | [https://shop116616022.taobao.com](https://shop116616022.taobao.com) | 77126188 | true |
 | KIGURUMI雷击工坊 | 伪哥（raigeki）     | [https://shop100905188.taobao.com](https://shop100905188.taobao.com) | 77126188 | true |
 | 魔形兔与原创设计 | 游弋     | [https://shop202579386.taobao.com](https://shop202579386.taobao.com) | 368072544 | true |
+| KigLand 偶域 kigurumi | Remi & Xiamiko  | [https://kigland.taobao.com](https://kigland.taobao.com)</br>[https://kigland.cn](https://kigland.cn) | 903520753 | true |
+| 鼠鼠工坊kigurumi | 鼠鼠 | [https://2vwbvjk3xbz7be881y9ya-r2rcnuic.taobao.com](https://2vwbvjk3xbz7be881y9ya-r2rcnuic.taobao.com) | 私域 | true |
 
-
- 
